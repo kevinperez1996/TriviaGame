@@ -1,5 +1,10 @@
 
-//--------------------QUESTIONS--------------------
+
+
+
+
+$( document ).ready(function() {
+//--------------------QUESTIONS--------------------//
 var questions = ["Which car manufacturer is from Germany?", `What car manufacturer's slogan is "The ultimate driving machine"?`, "Which car manufacturer is from France?",
     "What car manufacturer currently holds the top speed record?"];
 
@@ -77,18 +82,20 @@ else if (correct = 4){
    
 };
 
+$("#start").on("click", function(){
+    $("#smallContainer").show();
+    $("#start").hide();
+})
+
 
 
 //----------------COUNTER----------------------//
 //Variables to hold values for countdown timer
 var timeKeep;
-var time = 30;
+var time = 31;
 var countingDown = false;
 $("#clock").text(time);
 
-function clockReset() {
-    time = 31;
-};
 
 //Function to start the clock 
 function clockStart() {
@@ -103,6 +110,7 @@ function count() {
     time--;
     if (time === 0) {
         stop();
+        //gameOver();
     }
 
     $("#clock").text(time);
@@ -113,3 +121,5 @@ function clockStop() {
 //clockStart();
 
 $("#begin").on("click", clockStart());
+
+});
