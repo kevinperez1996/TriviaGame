@@ -7,10 +7,11 @@
 
 
 //--------------------QUESTIONS--------------------
-var questions = ["Which car manufacturer is from Germany?", "What is the slogan for BMW?", "Which was the first American auto manufacturer?", 
-"What car manufacturer currently holds the top speed record?"];
+var questions = ["Which car manufacturer is from Germany?", "What is the slogan for BMW?", "Which was the first American auto manufacturer?",
+    "What car manufacturer currently holds the top speed record?"];
 var wins = 0;
 var losses = 0;
+var q1 = $("#c11").val();
 
 //-------QUESTIONS-------//
 
@@ -22,9 +23,18 @@ $("#question3").text(questions[2]);
 
 $("#question4").text(questions[3]);
 
+$("#submit").on("click", check ());
 
 
-   
+function check() {
+    if (q1 === "ford") {
+        wins++;
+        console.log(wins);
+    }
+
+}
+
+
 
 
 
@@ -67,6 +77,7 @@ function count() {
 };
 function stop() {
     clearInterval(timeKeep);
-}
-
+};
 clockStart();
+
+//$("#begin").on("click", clockStart());
