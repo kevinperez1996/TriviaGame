@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 //--------------------QUESTIONS--------------------
 var questions = ["Which car manufacturer is from Germany?", `What car manufacturer's slogan is "The ultimate driving machine"?`, "Which car manufacturer is from France?",
     "What car manufacturer currently holds the top speed record?"];
@@ -60,12 +53,29 @@ $("#submit").on("click", function (event) {
 });
 
 //---------------GAMEOVER--------------------//
+var imageURL;
+
 function gameOver(){
+
+if (correct <= 1){
+    imageURL = "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif";
+}
+else if (correct <= 2){
+    imageURL = "https://media.giphy.com/media/9xijGdDIMovchalhxN/giphy.gif";
+}
+else if (correct <= 3){
+    imageURL = "https://media.giphy.com/media/Lcn0yF1RcLANG/giphy.gif";
+}
+else if (correct = 4){
+    imageURL = "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif";
+}
 
     $("#smallContainer").text("ALL DONE!!");
     $("#finished").text("You got " + correct + " of the questions correct");
-
-}
+    $("#doneImg").prepend($("<img>").attr("src", imageURL));
+    
+   
+};
 
 
 
