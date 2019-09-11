@@ -21,20 +21,19 @@ $("#question3").text(questions[2]);
 $("#question4").text(questions[3]);
 
 
+var correct = 0;
 
-$("#submit").on("click", function(event){
-    var correct = 0;
-    var incorrect = 0;
-    var unanswered = 0;
+$("#submit").on("click", function (event) {
+
+    event.preventDefault();
+    clockStop();
     
     //Answer Key/Checker
-
+    
     var a1 = document.trivia.q1.value
     var a2 = document.trivia.q2.value
     var a3 = document.trivia.q3.value
     var a4 = document.trivia.q4.value
-
-    event.preventDefault();
     console.log(a1);
     console.log(a2);
     console.log(a3);
@@ -43,30 +42,30 @@ $("#submit").on("click", function(event){
     if (a1 === "Audi") {
         correct++;
     }
+    
     if (a2 === "BMW") {
         correct++;
     }
+    
     if (a3 === "Peugeot") {
         correct++;
     }
+    
     if (a4 === "Bugatti") {
         correct++;
     }
-    console.log(correct);
-
-
     
+    console.log("correct: " + correct);
+    gameOver();
 });
 
+//---------------GAMEOVER--------------------//
+function gameOver(){
 
+    $("#smallContainer").text("ALL DONE!!");
+    $("#finished").text("You got " + correct + " of the questions correct");
 
-
-
-
-
-
-
-
+}
 
 
 
@@ -98,7 +97,7 @@ function count() {
 
     $("#clock").text(time);
 };
-function stop() {
+function clockStop() {
     clearInterval(timeKeep);
 };
 //clockStart();
