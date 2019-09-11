@@ -7,11 +7,8 @@
 
 
 //--------------------QUESTIONS--------------------
-var questions = ["Which car manufacturer is from Germany?", "What is the slogan for BMW?", "Which was the first American auto manufacturer?",
+var questions = ["Which car manufacturer is from Germany?", `What car manufacturer's slogan is "The ultimate driving machine"?`, "Which car manufacturer is from France?",
     "What car manufacturer currently holds the top speed record?"];
-var wins = 0;
-var losses = 0;
-var q1 = $("#c11").val();
 
 //-------QUESTIONS-------//
 
@@ -23,17 +20,43 @@ $("#question3").text(questions[2]);
 
 $("#question4").text(questions[3]);
 
-$("#submit").on("click", check ());
 
 
-function check() {
-    if (q1 === "ford") {
-        wins++;
-        console.log(wins);
+$("#submit").on("click", function(event){
+    var correct = 0;
+    var incorrect = 0;
+    var unanswered = 0;
+    
+    //Answer Key/Checker
+
+    var a1 = document.trivia.q1.value
+    var a2 = document.trivia.q2.value
+    var a3 = document.trivia.q3.value
+    var a4 = document.trivia.q4.value
+
+    event.preventDefault();
+    console.log(a1);
+    console.log(a2);
+    console.log(a3);
+    console.log(a4);
+    
+    if (a1 === "Audi") {
+        correct++;
     }
+    if (a2 === "BMW") {
+        correct++;
+    }
+    if (a3 === "Peugeot") {
+        correct++;
+    }
+    if (a4 === "Bugatti") {
+        correct++;
+    }
+    console.log(correct);
 
-}
 
+    
+});
 
 
 
@@ -78,6 +101,6 @@ function count() {
 function stop() {
     clearInterval(timeKeep);
 };
-clockStart();
+//clockStart();
 
-//$("#begin").on("click", clockStart());
+$("#begin").on("click", clockStart());
