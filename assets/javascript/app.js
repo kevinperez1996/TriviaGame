@@ -3,7 +3,8 @@ $(document).ready(function () {
     clockStop();
     //--------------------QUESTIONS--------------------//
     var questions = ["Which car manufacturer is from Germany?", `What car manufacturer's slogan is "The ultimate driving machine"?`, "Which car manufacturer is from France?",
-        "What car manufacturer currently holds the top speed record?"];
+        "What car manufacturer currently holds the top speed record?", "What car manufacturer has a prancing horse as its logo?", "What car brand is the luxury division of Honda?",
+    ];
 
     //-------QUESTIONS-------//
 
@@ -15,6 +16,10 @@ $(document).ready(function () {
 
     $("#question4").text(questions[3]);
 
+    $("#question5").text(questions[4]);
+
+    $("#question6").text(questions[5]);
+
 
     var correct = 0;
 
@@ -23,10 +28,13 @@ $(document).ready(function () {
         var a2 = document.trivia.q2.value
         var a3 = document.trivia.q3.value
         var a4 = document.trivia.q4.value
-        console.log(a1);
-        console.log(a2);
-        console.log(a3);
-        console.log(a4);
+        var a5 = document.trivia.q5.value
+        var a6 = document.trivia.q6.value
+
+        //console.log(a1);
+        //console.log(a2);
+        //console.log(a3);
+        //console.log(a4);
 
         if (a1 === "Audi") {
             correct++;
@@ -41,6 +49,12 @@ $(document).ready(function () {
         }
 
         if (a4 === "Bugatti") {
+            correct++;
+        }
+        if (a5 === "Ferrari") {
+            correct++;
+        }
+        if (a6 === "Acura") {
             correct++;
         }
 
