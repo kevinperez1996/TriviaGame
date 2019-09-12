@@ -1,8 +1,4 @@
 
-
-
-
-
 $( document ).ready(function() {
 //--------------------QUESTIONS--------------------//
 var questions = ["Which car manufacturer is from Germany?", `What car manufacturer's slogan is "The ultimate driving machine"?`, "Which car manufacturer is from France?",
@@ -24,6 +20,7 @@ var correct = 0;
 $("#submit").on("click", function (event) {
 
     event.preventDefault();
+    $("#smallContainer").hide();
     clockStop();
     
     //Answer Key/Checker
@@ -72,11 +69,11 @@ else if (correct <= 3){
     imageURL = "https://media.giphy.com/media/Lcn0yF1RcLANG/giphy.gif";
 }
 else if (correct = 4){
-    imageURL = "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif";
+    imageURL = "https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif";
 }
 
-    $("#smallContainer").text("ALL DONE!!");
-    $("#finished").text("You got " + correct + " of the questions correct");
+    $("#allDone").text("ALL DONE!!");
+    $("#pointCounter").text("You got " + correct + " of the 10 questions correct.");
     $("#doneImg").prepend($("<img>").attr("src", imageURL));
     
    
@@ -92,7 +89,7 @@ $("#start").on("click", function(){
 //----------------COUNTER----------------------//
 //Variables to hold values for countdown timer
 var timeKeep;
-var time = 31;
+var time = 11;
 var countingDown = false;
 $("#clock").text(time);
 
@@ -109,7 +106,7 @@ function clockStart() {
 function count() {
     time--;
     if (time === 0) {
-        stop();
+        clockStop();
         //gameOver();
     }
 

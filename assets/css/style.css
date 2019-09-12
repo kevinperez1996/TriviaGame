@@ -1,8 +1,90 @@
+body{ 
+    background-image: url(../images/beanstalk.png);
+    font-family: gayathri;
+    color: rgb(133, 162, 197);
+}
+
 #smallContainer{
     display: none;
+    text-align: center;
 
 }
+.container{
+    margin-top: 50px;
+    background-color: rgb(248, 231, 231);
+}
+
+#title{
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(133, 162, 197);
+    margin-top: 30px;
+}
+
 button{
     height: 60px; 
-    width: 110px;
+    padding-top: 12px;
+    text-align: center;
+    background-color:rgba(133, 162, 197, 0.212);
+    border: solid 1px gray;
+    font-size: 30px;
+    color: gray;  
+}
+
+#start{
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 200px;
+    margin-top: 80px;
+}
+
+#submit{
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#choice {
+    margin-left: 25px;
+}
+
+#choices {
+    font-size: 20px;
+    font-style: italic;
+    color: gray;
+}
+
+input{
+    font-size: 20px;
+}
+
+h2{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+img{
+    margin-bottom: 40px;
+    height: 400px;
+    margin-left: 27%;
+}
+
+#allDone{
+    text-align: center;
+    font-size: 40px; 
+    font-style: italic;  
+}
+
+#pointCounter{
+    text-align: center;
+    font-size:30px; 
+    color: gray;
+}
+
+#time{
+    color: gray;
 }

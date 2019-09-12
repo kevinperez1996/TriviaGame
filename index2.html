@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!--Google Fonts Link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" >
+
 </head>
 
 <body>
@@ -21,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                <h1>AUTOMOTIVE TRIVIA </h1>
+                <h1 id="title">AUTOMOTIVE TRIVIA </h1>
             </div>
         </div>
 
@@ -29,66 +32,67 @@
 
         <div id="smallContainer">
 
-            <h2>Time Remaining: <span id="clock"></span></h2>
+            <h2 id="time">Time Remaining: <span id="clock"></span></h2>
 
             <!--QUESTIONS-->
             <form id="trivia" name="trivia">
 
                 <h2><span id="question1"></span></h2>
-                
-                
-                <input type="radio" id="choice" name="q1" value="Ford"> Ford
-                
-                <input type="radio" id="choice" name="q1" value="Chevrolet"> Chevrolet
-                
-                <input type="radio" id="choice" name="q1" value="Toyota"> Toyota
-                
-                <input type="radio" id="choice" name="q1" value="Audi"> Audi
-                
-                
+
+                <div id="choices">
+                    <input type="radio" id="choice" name="q1" value="Ford"> Ford
+
+                    <input type="radio" id="choice" name="q1" value="Chevrolet"> Chevrolet
+
+                    <input type="radio" id="choice" name="q1" value="Toyota"> Toyota
+
+                    <input type="radio" id="choice" name="q1" value="Audi"> Audi
+                </div>
+
                 <h2><span id="question2"></span></h2>
-                
-                
-                <input type="radio" id="choice" name="q2" value="Chrysler"> Chrysler
-                
-                <input type="radio" id="choice" name="q2" value="LandRover"> Land Rover
-                
-                <input type="radio" id="choice" name="q2" value="BMW"> BMW
-                
-                <input type="radio" id="choice" name="q2" value="Cadilac"> Cadilac
-                
-                
+
+                <div id="choices">
+                    <input type="radio" id="choice" name="q2" value="Chrysler"> Chrysler
+
+                    <input type="radio" id="choice" name="q2" value="LandRover"> Land Rover
+
+                    <input type="radio" id="choice" name="q2" value="BMW"> BMW
+
+                    <input type="radio" id="choice" name="q2" value="Cadilac"> Cadilac
+
+                </div>
                 <h2><span id="question3"></span></h2>
-                
-                
-                <input type="radio" id="choice" name="q3" value="Peugeot"> Peugeot
-                
-                <input type="radio" id="choice" name="q3" value="Fiat"> Fiat
-                
-                <input type="radio" id="choice" name="q3" value="Buick"> Buick
-                
-                <input type="radio" id="choice" name="q3" value="Honda"> Honda
-                
-                
+
+                <div id="choices">
+                    <input type="radio" id="choice" name="q3" value="Peugeot"> Peugeot
+
+                    <input type="radio" id="choice" name="q3" value="Fiat"> Fiat
+
+                    <input type="radio" id="choice" name="q3" value="Buick"> Buick
+
+                    <input type="radio" id="choice" name="q3" value="Honda"> Honda
+                </div>
+
                 <h2><span id="question4"></span></h2>
-                
-                
-                <input type="radio" id="choice" name="q4" value="Ferrari"> Ferrari
-                
-                <input type="radio" id="choice" name="q4" value="Bugatti"> Bugatti
-                
-                <input type="radio" id="choice" name="q4" value="Lamborghini"> Lamborghini
-                
-                <input type="radio" id="choice" name="q4" value="McLaren"> McLaren<br>
-                
+
+                <div id="choices">
+                    <input type="radio" id="choice" name="q4" value="Ferrari"> Ferrari
+
+                    <input type="radio" id="choice" name="q4" value="Bugatti"> Bugatti
+
+                    <input type="radio" id="choice" name="q4" value="Lamborghini"> Lamborghini
+
+                    <input type="radio" id="choice" name="q4" value="McLaren"> McLaren<br>
+                </div>
+
                 <button id="submit">Submit</button>
             </form>
         </div>
-        
-        <div id="finished"></div>
+        <div id="allDone"></div>
+        <div id="pointCounter"></div>
         <div id="doneImg"></div>
-        
-        
+
+
     </div>
     <!--JS File Link-->
     <script type="text/javascript" src="assets/javascript/app.js"></script>
