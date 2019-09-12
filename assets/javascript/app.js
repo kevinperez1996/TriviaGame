@@ -18,16 +18,7 @@ $(document).ready(function () {
 
     var correct = 0;
 
-    $("#submit").on("click", function (event) {
-
-        event.preventDefault();
-        $("#smallContainer").hide();
-        //clockStop();
-        gameOver();
-    });
-
-    $("#choice").on("click", function () {
-
+    function checker() {
         var a1 = document.trivia.q1.value
         var a2 = document.trivia.q2.value
         var a3 = document.trivia.q3.value
@@ -53,17 +44,23 @@ $(document).ready(function () {
             correct++;
         }
 
-        console.log("correct: " + correct);
+    };
 
+    $("#submit").on("click", function (event) {
 
+        event.preventDefault();
+        $("#smallContainer").hide();
+        clockStop();
+        checker();
+        gameOver();
 
+    });
 
-    })
 
     //---------------GAMEOVER--------------------//
-    var imageURL;
-
+    
     function gameOver() {
+        var imageURL;
 
         if (correct <= 1) {
             imageURL = "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif";
@@ -98,27 +95,28 @@ $(document).ready(function () {
     var timeKeep;
     var time;
     var countingDown = false;
-    
-    
-    
+
+
+
     //Function to start the clock 
     function clockStart() {
-        time=10;
-       if (!countingDown) {
+        time = 10;
+        if (!countingDown) {
             timeKeep = setInterval(count, 1000);
             countingDown = true;
         }
-        
+
     };
-    
+
     function count() {
-         time--;
-         if (time === 0) {
+        time--;
+        if (time === 0) {
             $("#smallContainer").hide();
             clockStop();
+            checker();
             gameOver();
         }
-        $("#clock").text(time);    
+        $("#clock").text(time);
     };
 
     function clockStop() {
